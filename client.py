@@ -183,7 +183,7 @@ class MainPage(Tk.Toplevel):
     def ButtonInPage (self):
         Tk.Button(self, text="Logout",command=self.backLoginPage).place(x=620, y=405)
         Tk.Entry(self, width = 30 ).place(x=225, y=300)
-        Tk.Button(self,relief='raised', text="Browse", command=self.browseButton).place(x=525, y=300)
+        Tk.Button(self,relief='raised', text="Check", command=self.check_button).place(x=525, y=300)
         Tk.Button(self,relief='raised', text="exit", command=self.quit_t).place(x=685, y=405)
         Tk.Button(self, text = "Send", height = 4, width = 20,bg="blue").place(x=325, y=335)
  
@@ -192,12 +192,13 @@ class MainPage(Tk.Toplevel):
         self.destroy()
         self.mainPageFrame.logOut()
 
-    def browseButton(self):
-        try :
-            tipeFile = (('image files', '*.jpg'), ('png files', '*.png'), ('all files', '*'))
-            self.path = filedialog.askopenfilename(filetypes=tipeFile)
-        except :
-            messagebox.showwarning("error","wrong format media, please check again")
+    def check_button(self):
+        pass
+        # try :
+        #     tipeFile = (('image files', '*.jpg'), ('png files', '*.png'), ('all files', '*'))
+        #     self.path = filedialog.askopenfilename(filetypes=tipeFile)
+        # except :
+        #     messagebox.showwarning("error","wrong format media, please check again")
 
          
     def quit_t(self):

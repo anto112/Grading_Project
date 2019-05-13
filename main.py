@@ -24,7 +24,11 @@ class LoginPage:
         self.entry_password.place(x=170, y=88)
         Tk.Label (text ="", bg ="green",fg="brown",width="350",height="1",font=("tahoma",16)).place(x=0, y=185)
 
+        self.hide()
         self.makeButton()
+        
+        subFrame=MainPage(self)
+
 
     def makeButton (self):
         self.checkbox = Tk.Checkbutton(self.frameButton, command=self.keeplogin, text="Keep me logged in").grid(row=0, column=1)
@@ -82,7 +86,7 @@ class MainPage(Tk.Toplevel):
         y = (screen_height/2) - (height/2)
         self.geometry('%dx%d+%d+%d' % (width, height, x, y))
         self.resizable(0, 0)
-        self.configure(background='brown')
+        #self.configure(background='brown')
         self.title("MainPage")
         Tk.Label (self,text ="AUTOMATIC GRADING SYSTEM", bg ="grey",fg="black",width="600",height="1",font=("calibri",20)).pack() 
         Tk.Label (self,text ="Please Set The Requiretment for make grading automaticly bellow this",fg="red",font=("tahoma",14)).place(x=70,y=55)
@@ -96,7 +100,7 @@ class MainPage(Tk.Toplevel):
         Tk.Button(self, text="Logout",command=self.backLoginPage).place(x=620, y=405)
         Tk.Entry(self, width = 30 ).place(x=225, y=300)
         Tk.Button(self,relief='raised', text="Browse", command=self.browseButton).place(x=525, y=300)
-        Tk.Button(self, text = "Send", height = 8, width = 20,bg="blue").place(x=75, y=120)
+        Tk.Button(self, text = "Send", height = 8, width = 20,bg='#838B8B').place(x=75, y=120)
         Tk.Button(self, text = "Send", height = 8, width = 20,bg="blue").place(x=275, y=120)
         Tk.Button(self, text = "Send", height = 8, width = 20,bg="blue").place(x=475, y=120)
         # Tk.Button(self,relief='raised', text="New Image", command=self.openCAM).place(x=225, y=375)
