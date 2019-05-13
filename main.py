@@ -77,7 +77,7 @@ class MainPage(Tk.Toplevel):
         """Constructor"""
         Tk.Toplevel.__init__(self)
         self.mainPageFrame = page             
-        self.iconbitmap(r'11.ico')
+        # self.iconbitmap(r'11.ico')
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
         width = 750
@@ -131,7 +131,7 @@ class MainPage(Tk.Toplevel):
 def main ():
     root = Tk.Tk()
     root.bind('<Escape>', lambda e: root.quit())
-    root.iconbitmap(r'1123.ico')
+    # root.iconbitmap(r'1123.ico')
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
     width = 350

@@ -88,7 +88,7 @@ class LoginPage:
         y = (screen_height/2) - (height_s/2)
         self.regis_form_s.geometry('%dx%d+%d+%d' % (width_s, height_s, x, y))
         self.regis_form_s.resizable(0, 0)
-        self.regis_form_s.iconbitmap(r'reg.ico')
+        # self.regis_form_s.iconbitmap(r'reg.ico')
 
         def new_user():
             username=self.name.get()
@@ -161,7 +161,7 @@ class MainPage(Tk.Toplevel):
         """Constructor"""
         Tk.Toplevel.__init__(self)
         self.mainPageFrame = page             
-        self.iconbitmap(r'11.ico')
+        # self.iconbitmap(r'11.ico')
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
         width = 750
@@ -212,7 +212,7 @@ def main ():
     global root
     root = Tk.Tk()
     root.bind('<Escape>', lambda e: root.quit())
-    root.iconbitmap(r'1234.ico')
+    # root.iconbitmap(r'1234.ico')
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
     width = 350
