@@ -170,7 +170,7 @@ class MainPage(Tk.Toplevel):
         y = (screen_height/2) - (height/2)
         self.geometry('%dx%d+%d+%d' % (width, height, x, y))
         self.resizable(0, 0)
-        self.configure(background='brown')
+        # self.configure(background='brown')
         self.title("MainPage")
         Tk.Label (self,text ="VIEW SCORE", bg ="grey",fg="black",width="600",height="1",font=("calibri",20)).pack() 
         # Tk.Label (self,text ="Please Set The Requiretment for make grading automaticly bellow this",fg="red",font=("tahoma",14)).place(x=70,y=55)
