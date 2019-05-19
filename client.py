@@ -3,6 +3,7 @@ from tkinter import messagebox
 from tkinter import filedialog
 import sqlite3
 import os
+from dbss import *
 
 with sqlite3.connect('student.db') as db:
     cursor = db.cursor()
@@ -42,6 +43,7 @@ class LoginPage:
 
         Tk.Label (text ="", bg ="green",fg="brown",width="350",height="1",font=("tahoma",16)).place(x=0, y=185)
         self.makeButton()
+        # Database_Ui(self)
 
     def makeButton (self):
         self.regbutton = Tk.Button(self.frameButton, text="Register",command=self.regis_form ,bg="green").grid(row=0, column=1)
